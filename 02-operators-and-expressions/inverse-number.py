@@ -19,7 +19,7 @@ def inverse(number):
 
 
 def main():
-    number = input()
+    number = int(input())
     print(inverse(number))
 
 

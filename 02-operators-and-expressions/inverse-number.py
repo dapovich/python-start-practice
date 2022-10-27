@@ -1,3 +1,4 @@
+# Make junior and junior+ tasks for inverse number
 LEFT_BOUNDARY_32INT = -2147483648
 RIGHT_BOUNDARY_32INT = 2147483648
 
@@ -14,7 +15,7 @@ def inverse(number):
             reverseString = string[::-1]
             reverseNumber = int(reverseString)
         return reverseNumber
-    return "Error: input number is beyond the boundaries of 32-bit integer value."
+    return 0
 
 
 def main():

@@ -1,4 +1,4 @@
-# change all occurences of string 'right' to the 'left'
+# change all occurences of string 'right' to the 'left' in the input string with ',' separator
 def changeRightLeft(inputStr):
     splitStr = inputStr.split(",")
     for idx in range(0, len(splitStr) - 1):

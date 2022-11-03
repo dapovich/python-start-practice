@@ -5,8 +5,8 @@ def printSequence(size):
 
 
 def main():
-    inputVar = input("Enter an integer number in range [1-9]...\n")
-    number = int(inputVar)
+    input_variable = input("Enter an integer number in range [1-9]...\n")
+    number = int(input_variable)
     
     if number >= 1 and number <= 9:
         printSequence(number)

@@ -1,18 +1,18 @@
 # secret message program
 def main():
-    inputString = input()
+    input_string = input()
     # method 1
     # use generator expressions and method join
-    capitalsWord = ''.join([char for char in inputString if char.isupper()])
-    print(capitalsWord)
+    capitals_word = ''.join([char for char in input_string if char.isupper()])
+    print(capitals_word)
     # method 2
-    capitalsWordMethod2 = ''
-    for letter in inputString:
-        # ord converts a character into its Unicode code
-        # codes of capitals characters A - Z is being in range 65 - 90
-        if ord(letter) in range(65, 91):
-            capitalsWordMethod2 += letter
-    print(capitalsWord)
+    # capitals_word = ''
+    # for letter in input_string:
+    #     # ord converts a character into its Unicode code
+    #     # codes of capitals characters A - Z is being in range 65 - 90
+    #     if ord(letter) in range(65, 91):
+    #         capitals_word += letter
+    # print(capitals_word)
 
 
 if __name__ == '__main__':

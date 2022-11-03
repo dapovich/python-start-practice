@@ -7,14 +7,14 @@ def inverse(number):
     if int(number) > LEFT_BOUNDARY_32INT and int(number) < RIGHT_BOUNDARY_32INT:
         string = str(number)
         if string[0] == '-':
-            concatenateString = string[1:]
+            concatenated_string = string[1:]
             # use [::-1] to reverse string characters
-            reverseString = concatenateString[::-1]
-            reverseNumber = int(string[0] + reverseString)
+            reversed_string = concatenated_string[::-1]
+            reversed_number = int(string[0] + reversed_string)
         else:
-            reverseString = string[::-1]
-            reverseNumber = int(reverseString)
-        return reverseNumber
+            reversed_string = string[::-1]
+            reversed_number = int(reversed_string)
+        return reversed_number
     return 0
 
 

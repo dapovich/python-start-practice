@@ -1,7 +1,7 @@
 # check if there are three words in a row
-def checkThreeWords(inputStr):
+def checkThreeWords(input_string):
     count = 0
-    for substring in inputStr.split():
+    for substring in input_string.split():
         if substring.isalpha():
             count += 1
         else:
@@ -12,8 +12,8 @@ def checkThreeWords(inputStr):
 
 
 def main():
-    inputString = input("Enter your string with separator as ' ' (whitespace)...\n")
-    print(checkThreeWords(inputString))
+    input_string = input("Enter your string with separator as ' ' (whitespace)...\n")
+    print(checkThreeWords(input_string))
 
 
 if __name__ == '__main__':

@@ -11,10 +11,10 @@ def check(number):
 
 
 def main():
-    inputValue = input()
-    intNumber = int(inputValue)
+    input_value = input()
+    int_number = int(input_value)
     
-    print(check(intNumber))
+    print(check(int_number))
 
 
 if __name__ == '__main__':

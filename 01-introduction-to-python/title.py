@@ -1,7 +1,7 @@
 def main():
-    articleTitle = "digital signal processing with fpga"
-    print(articleTitle)
-    print(articleTitle.title())
+    article_title = "digital signal processing with fpga"
+    print(article_title)
+    print(article_title.title())
 
 if __name__ == '__main__':
     main()

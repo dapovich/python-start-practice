@@ -11,7 +11,7 @@ def findProduct(list: List[int]) -> int:
         sum_of_even_numbers = sum(even_numbers)
         # get the last element in the original list
         last_element = list[-1]
-        result = int(last_element*sum_of_even_numbers)
+        result = int(last_element * sum_of_even_numbers)
         return result
 
 

@@ -8,7 +8,7 @@ consonats = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p',
              'q', 'r', 's', 't', 'v', 'w', 'x', 'z'}
 
 
-def countStripedWords(string: str) -> int:
+def count_striped_words(string: str) -> int:
     stack = []
     striped_words_counter = 0
     substring_is_a_stripped_word = True
@@ -42,10 +42,10 @@ def countStripedWords(string: str) -> int:
 
 
 def main():
-    print(countStripedWords("Dog,cat,mouse,bird.human."))
-    print(countStripedWords("My name is ..."))
-    print(countStripedWords("Hello world"))
-    print(countStripedWords("A quantity of striped words."))
+    print(count_striped_words("Dog,cat,mouse,bird.human."))
+    print(count_striped_words("My name is ..."))
+    print(count_striped_words("Hello world"))
+    print(count_striped_words("A quantity of striped words."))
 
 
 if __name__ == '__main__':

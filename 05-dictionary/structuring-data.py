@@ -2,11 +2,7 @@
 
 
 def to_dictionary(keys: list[str], values: list[int | float]) -> dict[str, int | float]:
-    result_dict = {}
-    for i in range(len(keys)):
-        result_dict[keys[i]] = values[i]
-
-    return result_dict
+    return dict(zip(keys, values))
 
 
 def main():

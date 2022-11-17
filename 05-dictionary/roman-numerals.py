@@ -1,7 +1,9 @@
 # Roman numerals representation for integer values
+from collections import OrderedDict
 
 
 # Global dictionary of roman_numerals
+roman_numerals = OrderedDict()
 roman_numerals = {
     1000 : 'M',
     900 : 'CM',

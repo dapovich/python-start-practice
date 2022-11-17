@@ -3,7 +3,7 @@ from typing import Union
 
 
 def findDifferenceBtwMaxMin(list: List[Union[int, float]]) -> Union[int, float]:
-    if list == []:
+    if not list:
         return 0
     else:
         max_value = max(list)

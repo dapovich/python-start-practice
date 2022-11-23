@@ -13,7 +13,7 @@ def find_words_popularity(input_string: str) -> dict[str, int]:
         # if there is a dot at the end of string, it will splitted as an empty char '' at the end of splitted list
         if word == '':
             continue
-        elif not word in words_popularity:
+        elif word not in words_popularity:
             words_popularity[word] = 1
         else:
             words_popularity[word] += 1

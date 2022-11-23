@@ -2,11 +2,7 @@
 
 
 def to_inverse(phone_book: dict[str, str]) -> dict[str, str]:
-    inversed_phone_book = {}
-    for name, phone_number in phone_book.items():
-        inversed_phone_book[phone_number] = name
-
-    return inversed_phone_book
+    return dict(zip(phone_book.values(), phone_book.keys()))
 
 
 def main():

@@ -2,7 +2,7 @@
 
 
 def to_doubled_odd(size: int) -> list[int]:
-    assert size >= 0, f"Argument size must be greater than 0, but you got {size=}"
+    assert size >= 0, f"Argument size must be equal or greater than 0, but you got {size=}"
     return [2 * number for number in range(size) if number % 2]
 
 

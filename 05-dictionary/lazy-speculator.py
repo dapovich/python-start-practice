@@ -6,13 +6,13 @@ rates = {
     'SovkomBank' : 54.9,
     'Rosbank' : 58.54,
     'TinkoffBank' : 51,
+    'Jamaika' : 51,
+    'ECA' : 50
 }
 
 
 def determine_best_offer(rates: dict[str, int | float]) -> tuple[str, int | float]:
-    best_bank = min(rates, key=lambda key: rates[key])
-    best_offer = rates[best_bank]
-    return (best_bank, best_offer)
+    return min(rates.items(), key=lambda key: key[1])
 
 
 def main():

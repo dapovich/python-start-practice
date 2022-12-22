@@ -7,7 +7,7 @@
 # 1) возвращает список студентов по курсу, причем студенты одного курса располагались в алфавитном порядке;
 # 2) находит средний балл каждой группы по каждому предмету;
 # 3) определяет самого старшего студента и самого младшего студентов.
-# 4) возвращает словарь, где для каждой группы определен лучшый с точки зрения успеваемости студент.
+# 4) возвращает словарь, где для каждой группы определен лучший с точки зрения успеваемости студент.
 
 from collections import defaultdict
 
@@ -22,11 +22,11 @@ students_dict = {
         'birth_year' : 2000,
         'group_number' : '321-1',
         'grades' : {
-            'math' : 5,
+            'math' : 3,
             'electrical_circuit' : 4,
             'digital_signal_processing' : 4,
             'fpga_programming' : 5,
-            'physics' : 5
+            'physics' : 4
         }
     },
 
@@ -42,7 +42,7 @@ students_dict = {
             'electrical_circuit' : 4,
             'digital_signal_processing' : 2,
             'fpga_programming' : 4,
-            'physics' : 4
+            'physics' : 3
         }
     },
 
@@ -103,7 +103,7 @@ students_dict = {
         'group_number' : '201',
         'grades' : {
             'math' : 3,
-            'electrical_circuit' : 4,
+            'electrical_circuit' : 5,
             'digital_signal_processing' : 3,
             'fpga_programming' : 4,
             'physics' : 3
@@ -176,11 +176,33 @@ def get_the_youngest_and_the_oldest_students(students_dict: dict) -> list[tuple]
     ], key=lambda item: item[1])
 
 
-def find_the_best_students(student_dict: dict) -> dict:
-    
+def get_the_best_student_in_groups(students_dict: dict) -> dict:
+    # Get the dict of all students in groups with its average grade
+    groups = defaultdict(dict)
+    for student_number in students_dict.keys():
+        group_number = students_dict[student_number]['group_number']
+        number_of_subjects = len(students_dict[student_number]['grades'])
+        grades_average = sum(students_dict[student_number]['grades'].values()) / number_of_subjects
+        student_surname = students_dict[student_number]['surname']
+        groups[group_number][student_surname] = grades_average
+
+    # Dictionary with the best students in groups
+    best_students = dict()
+    for group_number in groups.keys():
+        # Return the surname of student with max average grade
+        # NOTE: use itemgetter() and key argument to specify that
+        # find max among the VALUES.
+        best_student_surname = max(groups[group_number].keys(), key=lambda key: groups[group_number][key])
+        best_student_average_grade = groups[group_number][best_student_surname]
+        best_students[group_number] = {best_student_surname : best_student_average_grade}
+
+    return best_students
+
+
 
 
 if __name__ == '__main__':
+
     print("1. Функция, которая возвращает список студентов по курсу, причем студенты одного курса располагались в алфавитном порядке:")
     course_number = 2
     print(f"List of students with {course_number=}:")
@@ -191,4 +213,7 @@ if __name__ == '__main__':
 
     print("3. Функция, которая определяет самого старшего студента и самого младшего студентов.")
     print(get_the_youngest_and_the_oldest_students(students_dict), end='\n\n')
+
+    print("4. Функция, которая возвращает словарь, где для каждой группы определен лучший с точки зрения успеваемости студент.")
+    print(get_the_best_student_in_groups(students_dict), end='\n\n')
 

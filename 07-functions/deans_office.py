@@ -164,7 +164,6 @@ def get_the_youngest_and_the_oldest_students(students_dict: dict) -> list[tuple]
         student_surname = students_dict[student_number]['surname']
         student_birth_year = students_dict[student_number]['birth_year']
         birth_years[student_surname] = student_birth_year
-    print(birth_years)
 
     max_birth_year = max(birth_years.values())
     min_birth_year = min(birth_years.values())
@@ -178,7 +177,7 @@ def get_the_youngest_and_the_oldest_students(students_dict: dict) -> list[tuple]
 
 
 def find_the_best_students(student_dict: dict) -> dict:
-    return {}
+    
 
 
 if __name__ == '__main__':
@@ -191,6 +190,5 @@ if __name__ == '__main__':
     print(get_the_average_grade(students_dict), end='\n\n')
 
     print("3. Функция, которая определяет самого старшего студента и самого младшего студентов.")
-    help(get_the_youngest_and_the_oldest_students)
     print(get_the_youngest_and_the_oldest_students(students_dict), end='\n\n')
 

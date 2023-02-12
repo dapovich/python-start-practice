@@ -12,6 +12,7 @@
 #     to_find_largest_rectangle([2, 1, 4, 5, 1, 3, 3]) == 8
 
 
+# TODO: Check whether it could be solved with map, reduce, filter function or other functools
 def to_find_largest_rectangle(heights: list[int]) -> int:
     stack = []
     idx = 0

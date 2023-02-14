@@ -22,17 +22,17 @@ def to_find_largest_rectangle(heights: list[int]) -> int:
             stack.append(idx)
             idx += 1
         else:
-            x = stack[-1]
+            jdx = stack[-1]
             stack.pop()
-            height = heights[x]
-            temp = height * (idx - stack[-1] - 1) if len(stack) != 0 else height * idx
-            largest_area = max(largest_area, temp)
+            height = heights[jdx]
+            candidate_height = height * (idx - stack[-1] - 1) if len(stack) != 0 else height * idx
+            largest_area = max(largest_area, candidate_height)
     while len(stack) > 0:
-        x = stack[-1]
-        height = heights[x]
+        jdx = stack[-1]
+        height = heights[jdx]
         stack.pop()
-        temp = height * (len(heights) - stack[-1] - 1) if len(stack) != 0 else height * len(heights)
-        largest_area = max(largest_area, temp)
+        candidate_height = height * (len(heights) - stack[-1] - 1) if len(stack) != 0 else height * len(heights)
+        largest_area = max(largest_area, candidate_height)
     return largest_area
 
 

@@ -14,6 +14,7 @@
 
 # TODO: Check whether it could be solved with map, reduce, filter function or other functools
 def to_find_largest_rectangle(heights: list[int]) -> int:
+    # Contains the index of histogram
     stack = []
     idx = 0
     largest_area = 0
@@ -38,21 +39,23 @@ def to_find_largest_rectangle(heights: list[int]) -> int:
 
 if __name__ == '__main__':
     print("Test 1\nInput: [5]")
-    print(f"Output: {to_find_largest_rectangle([5])}")
+    print(f"Output: {to_find_largest_rectangle([5])}\n")
     assert to_find_largest_rectangle([5]) == 5, print(f"ERROR: output is uncorrect.")
 
     print("Test 2\nInput: [5, 3]")
-    print(f"Output: {to_find_largest_rectangle([5, 3])}")
+    print(f"Output: {to_find_largest_rectangle([5, 3])}\n")
     assert to_find_largest_rectangle([5, 3]) == 6, print(f"ERROR: output is uncorrect.")
 
     print("Test 3\nInput: [1, 1, 4, 1]")
-    print(f"Output: {to_find_largest_rectangle([1, 1, 4, 1])}")
+    print(f"Output: {to_find_largest_rectangle([1, 1, 4, 1])}\n")
     assert to_find_largest_rectangle([1, 1, 4, 1]) == 4, print(f"ERROR: output is uncorrect.")
 
     print("Test 4\nInput: [1, 1, 3, 1]")
-    print(f"Output: {to_find_largest_rectangle([1, 1, 3, 1])}")
+    print(f"Output: {to_find_largest_rectangle([1, 1, 3, 1])}\n")
     assert to_find_largest_rectangle([1, 1, 3, 1]) == 4, print(f"ERROR: output is uncorrect.")
 
     print("Test 5\nInput: [2, 1, 4, 5, 1, 3, 3]")
-    print(f"Output: {to_find_largest_rectangle([2, 1, 4, 5, 1, 3, 3])}")
+    print(f"Output: {to_find_largest_rectangle([2, 1, 4, 5, 1, 3, 3])}\n")
     assert to_find_largest_rectangle([2, 1, 4, 5, 1, 3, 3]) == 8, print(f"ERROR: output is uncorrect.")
+
+    print("Tests are passed :)")

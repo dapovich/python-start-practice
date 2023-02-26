@@ -2,8 +2,6 @@
 # Дано: неоптимальный код.
 #
 # Задание: оптимизировать следующий код.
-#
-#
 # def responses_creator(item_ids):
 #     item_ids = [None] if item_ids is None else item_ids
 #
@@ -15,12 +13,12 @@
 
 
 def responses_creator(item_ids=None):
+    """Return a list of responses"""
     # We need to check if parameter item_ids is None as it's noniterable object
-    if item_ids == None:
+    if item_ids is None:
         return item_ids
-    else:
-        # Use list comprehension to create the list
-        return [dict(item_id=item_id) for item_id in item_ids]
+    # Use list comprehension to create the list
+    return [dict(item_id=item_id) for item_id in item_ids]
 
 
 if __name__ == "__main__":

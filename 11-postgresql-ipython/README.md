@@ -8,5 +8,5 @@
 
 - [PostgreSQL 15](https://www.postgresql.org/) - a powerful, open source object-relational database system
 - [DbSchema](https://dbschema.com/) - a database design tool
-- [iPython-SQL](https://github.com/catherinedevlin/ipython-sql)
-- [Jupyter](https://jupyter.org/)
+- [Jupyter](https://jupyter.org/) - an interactive development environment for nootebooks, code, and data
+- [iPython-SQL](https://github.com/catherinedevlin/ipython-sql) - a library that allows to write SQL code rigth in the notebook and work with database

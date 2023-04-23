@@ -4,7 +4,9 @@
 
 ![ERD scheme of database](./img/webstore_scheme.png)
 
-## Technologies
+## 📌 Technologies
 
-- [PostgreSQL 15](https://www.postgresql.org/)
-- [DbSchema](https://dbschema.com/)
+- [PostgreSQL 15](https://www.postgresql.org/) - a powerful, open source object-relational database system
+- [DbSchema](https://dbschema.com/) - a database design tool
+- [iPython-SQL](https://github.com/catherinedevlin/ipython-sql)
+- [Jupyter](https://jupyter.org/)
